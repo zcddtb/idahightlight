@@ -15,7 +15,8 @@
   "bugs": {
     "url": "https://github.com/zcddtb/idahightlight/issues"
   },
-  "homepage": "https://github.com/zcddtb/idahightlight#readme"
+  "homepage": "https://github.com/zcddtb/idahightlight#readme",
+  
   "publishConfig": {
    "@zcddtb:registry": "https://npm.pkg.github.com"
  }
