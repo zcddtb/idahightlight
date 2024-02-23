@@ -1,0 +1,34 @@
+name: Node.js Package
+
+on:
+  push:
+    branches:
+      - main
+     
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{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}}
