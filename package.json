@@ -1,7 +1,7 @@
 {
   "name": "@zcddtb/idahightlight",
   "version": "1.0.0",
-  "description": "ida在7.x版本中由于主程序都变为64位程序，所以要求插件也变为64位dll，因此在vs工程需要以下修改：",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
